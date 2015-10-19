@@ -66,7 +66,7 @@ var rawStr = function(strings, ...values){
 var rawVar = 12;
 
 USAGE:
-tag`this is string ${rawVar}`
+rawStr`this is string ${rawVar}`
 ```
 ```
 RESULT:
