@@ -12,16 +12,16 @@ Tool.log = function(type, msg){
 
     switch(type){
         case 'module':
-            msg = chalk.cyan(msg);
+            msg = '## ' + chalk.cyan(msg);
             break;
         case 'unit':
-            msg = chalk.magenta(msg);
+            msg = '- ' + chalk.magenta(msg);
             break;
         case 'err':
-            msg = chalk.red(msg);
+            msg = '\`' + chalk.red(msg) + '\`';
             break;
         default:
-            msg = chalk.white(msg);
+            msg = '\`\`\`' + chalk.white(msg) + '\`\`\`';
             break;
     }
 

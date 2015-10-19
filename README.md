@@ -9,26 +9,26 @@ npm : 2.11.3
 ```
 
 # Experiment List
-ES6 template literal string
-Back-tick Basic
-
+## ES6 template literal string
+- Back-tick Basic
+```
 CONTEXT: 
 var btTestContext = 'back-tick';
 this is a test for ${btTestContext}
 
 RESULT:
 this is a test for back-tick
-
-Expression
-
+```
+- Expression
+```
 CONTEXT:
 var btA = 12, btB = 12;
 btA + btB is equal to ${btA} + ${btB} = ${btA + btB};
 
 RESULT:
 btA + btB is equal to 12 + 12 = 24;
-
-Tagged string
+```
+- Tagged string
 
 
 # usage
