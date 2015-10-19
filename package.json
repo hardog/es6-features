@@ -1,0 +1,33 @@
+{
+  "name": "es6-features",
+  "version": "1.0.0",
+  "description": "experiment for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncuzp/ES6-feature.git"
+  },
+  "keywords": [
+    "es6",
+    "features",
+    "node"
+  ],
+  "author": "Frand <1273203953@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ncuzp/ES6-feature/issues"
+  },
+  "homepage": "https://github.com/ncuzp/ES6-feature#readme",
+  "dependencies": {
+    "grunt": "0.4.5",
+    "gulp": "^3.9.0",
+    "gulp-babel": "5.1.0",
+    "gulp-rename": "1.2.2",
+    "chalk": "1.1.0",
+    "underscore": "1.8.3"
+  }
+}

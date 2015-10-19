@@ -1,0 +1,18 @@
+# ES6-feature
+experiment es6 feature
+
+# Test Envioronment
+```
+OS :  Win 10.0.10240
+node : 0.12.7
+npm : 2.11.3
+```
+
+# Experiment List
+<%= result %>
+
+# usage
+first, install npm & node, then type the following command:
+```
+$npm start
+```
