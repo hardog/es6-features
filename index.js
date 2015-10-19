@@ -42,3 +42,6 @@ var tagVarA = 12;
 
 Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\\n\');\n    var values = values.join(\'\\n\');\n\n    // just todo something\n\n    return \'\\nRESULT:\\nstrings:\\n\' + strings + \'values:\\n\' + values + \'\\n\';\n};\nvar tagVarA = 12;\n\nUSAGE:\ntag`this is string ${tagVarA}`\n');
 Tool.log(tag(_templateObject, tagVarA));
+
+// =================== raw string ====================
+Tool.log('unit', 'raw string');

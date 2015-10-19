@@ -59,3 +59,6 @@ USAGE:
 tag\`this is string \$\{tagVarA\}\`
 `);
 Tool.log(tag`this is string ${tagVarA}`);
+
+// =================== raw string ====================
+Tool.log('unit', 'raw string');

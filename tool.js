@@ -15,7 +15,7 @@ Tool.log = function(type, msg){
             msg = '## ' + chalk.cyan(msg);
             break;
         case 'unit':
-            msg = '- ' + chalk.magenta(msg);
+            msg = '+ ' + chalk.magenta(msg);
             break;
         case 'err':
             msg = '\`' + chalk.red(msg) + '\`';
