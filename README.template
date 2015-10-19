@@ -4,7 +4,9 @@ Experiment ES6 features
 # Usage
 first, install npm & node, then type the following command:
 ```
-$ npm start
+$ npm install   // 安装依赖包
+$ gulp          // 利用babel转成es5执行
+$ node build    // 自动构建结果
 ```
 
 # Test Envioronment

@@ -17,6 +17,15 @@ btA + btB is equal to ${btA} + ${btB} = ${btA + btB};
 RESULT:
 btA + btB is equal to 12 + 12 = 24;
 ```
++ use function
+```
+CONTEXT:
+var negativeNum = -12;
+use Math.abs fn ${Math.abs(negativeNum)}
+
+RESULT:
+use Math.abs fn 12
+```
 + Tagged string
 ```
 CONTEXT:

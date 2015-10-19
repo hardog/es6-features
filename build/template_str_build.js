@@ -23,6 +23,12 @@ var btA = 12,
 
 Tool.log('\nCONTEXT:\nvar btA = 12, btB = 12;\nbtA + btB is equal to ${btA} + ${btB} = ${btA + btB};\n\nRESULT:\nbtA + btB is equal to ' + btA + ' + ' + btB + ' = ' + (btA + btB) + ';\n');
 
+// ================== use function  ======================
+Tool.log('unit', 'use function');
+var negativeNum = -12;
+
+Tool.log('\nCONTEXT:\nvar negativeNum = -12;\nuse Math.abs fn ${Math.abs(negativeNum)}\n\nRESULT:\nuse Math.abs fn ' + Math.abs(negativeNum) + '\n');
+
 // ============== tagged string ===================
 Tool.log('unit', 'Tagged string');
 var tag = function tag(strings) {

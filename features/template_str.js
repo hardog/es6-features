@@ -30,6 +30,19 @@ RESULT:
 btA + btB is equal to ${btA} + ${btB} = ${btA + btB};
 `);
 
+// ================== use function  ======================
+Tool.log('unit', 'use function');
+var negativeNum = -12;
+
+Tool.log(`
+CONTEXT:
+var negativeNum = -12;
+use Math.abs fn \$\{Math.abs(negativeNum)\}
+
+RESULT:
+use Math.abs fn ${Math.abs(negativeNum)}
+`);
+
 // ============== tagged string ===================
 Tool.log('unit', 'Tagged string');
 var tag = function(strings, ...values){
