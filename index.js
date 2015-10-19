@@ -34,13 +34,11 @@ var tag = function tag(strings) {
     var strings = strings.join('\n');
     var values = values.join('\n');
 
-    Tool.log('\n        RESULT:\n        strings is:\n        ' + strings + '\n        values is:\n        ' + values + '\n    ');
-
     // just todo something
 
-    return 'this is the tag result!';
+    return 'strings:[' + strings + '], values:[' + values + ']';
 };
 var tagVarA = 12;
 
-Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\n\');\n    var values = values.join(\'\n\');\n\n    Tool.log(`\n        RESULT:\n        strings is:\n        ${strings}\n        values is:\n        ${values}\n    `);\n\n    // just todo something\n\n    return \'this is the tag result!\';\n};\nvar tagVarA = 12;\n');
+Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\\n\');\n    var values = values.join(\'\\n\');\n\n    // just todo something\n\n    return \'strings:\' + strings + \', values:\' + values;\n};\nvar tagVarA = 12;\n');
 Tool.log(tag(_templateObject, tagVarA));

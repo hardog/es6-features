@@ -37,37 +37,21 @@ var tag = function(strings, ...values){
     var strings = strings.join('\n');
     var values = values.join('\n');
 
-    Tool.log(`
-        RESULT:
-        strings is:
-        ${strings}
-        values is:
-        ${values}
-    `);
-
     // just todo something
 
-    return 'this is the tag result!';
+    return 'strings:[' + strings + '], values:[' + values + ']';
 };
 var tagVarA = 12;
 
 Tool.log(`
 CONTEXT:
 var tag = function(strings, ...values){
-    var strings = strings.join('\n');
-    var values = values.join('\n');
-
-    Tool.log(\`
-        RESULT:
-        strings is:
-        \$\{strings\}
-        values is:
-        \$\{values\}
-    \`);
+    var strings = strings.join('\\n');
+    var values = values.join('\\n');
 
     // just todo something
 
-    return 'this is the tag result!';
+    return 'strings:' + strings + ', values:' + values;
 };
 var tagVarA = 12;
 `);
