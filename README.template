@@ -4,7 +4,7 @@ Experiment ES6 features
 # Usage
 first, install npm & node, then type the following command:
 ```
-$npm start
+$ npm start
 ```
 
 # Test Envioronment

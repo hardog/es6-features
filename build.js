@@ -1,15 +1,30 @@
 var execSync = require('child_process').execSync;
+var fs = require('fs');
 var _ = require('underscore');
 var path = require('path');
 var grunt = require('grunt');
 
-var readmeLocatePath = path.join(__dirname, 'README.md');
+var readmePath = 'README.md';
 var readmeTemplateContent = _.template(grunt.file.read(path.join(__dirname, 'README.template')));
 
-var nodeCommand = 'node index';
+var compiledPaths = './compiled/';
+var buildPaths = './build/'; 
+var featuresPaths = './features/';
 
-var output = execSync(nodeCommand).toString();
+var fileList = fs.readdirSync(featuresPaths);
+var output,
+    nodeCommand,
+    indexReadMeTpl = [];
 
-grunt.file.write(readmeLocatePath, readmeTemplateContent({
-    result:output
+_.each(fileList, function(v, k ){
+    nodeCommand = 'node ' + buildPaths + v.replace(/\.js/, '') + '_build.js';
+    output = execSync(nodeCommand).toString();
+    indexReadMeTpl.push('- [' + featuresPaths + v + '](' + featuresPaths + v + ')');
+    grunt.file.write(path.join(__dirname, compiledPaths + readmePath), output);
+});
+
+// readme write back
+grunt.file.write(path.join(__dirname, readmePath), readmeTemplateContent({
+    result:indexReadMeTpl.join('\n')
 }));
+
