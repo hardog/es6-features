@@ -15,5 +15,5 @@ npm : 2.11.3
 ```
 
 # Experiment List
-- [template_str.js](./compiled/template_str.md)
+- [template_str](./compiled/template_str.md)
 
