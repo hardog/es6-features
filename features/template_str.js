@@ -39,7 +39,7 @@ var tag = function(strings, ...values){
 
     // just todo something
 
-    return '\nRESULT:\n strings:\n' + strings + '\nvalues:\n' + values + '\n';
+    return '\nRESULT:\nstrings:\n' + strings + 'values:\n' + values + '\n';
 };
 var tagVarA = 12;
 
@@ -51,7 +51,7 @@ var tag = function(strings, ...values){
 
     // just todo something
 
-    return '\\nRESULT:\\n strings:\\n' + strings + '\\nvalues:\\n' + values + '\\n';
+    return '\\nRESULT:\\nstrings:\\n' + strings + 'values:\\n' + values + '\\n';
 };
 var tagVarA = 12;
 
