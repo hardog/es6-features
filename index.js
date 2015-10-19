@@ -50,4 +50,4 @@ var rawStr = function rawStr(strings) {
 var rawVar = 12;
 
 Tool.log('\nCONTEXT:\nvar rawStr = function(strings, ...values){\n    return \'\\nRESULT:\\n\' + strings.raw[0] + \'\\n\'\n};\nvar rawVar = 12;\n\nUSAGE:\ntag`this is string ${rawVar}`\n');
-Tool.log(tag(_templateObject, rawVar));
+Tool.log(rawStr(_templateObject, rawVar));

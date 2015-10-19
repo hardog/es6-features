@@ -76,4 +76,4 @@ var rawVar = 12;
 USAGE:
 tag\`this is string \$\{rawVar\}\`
 `);
-Tool.log(tag`this is string ${rawVar}`);
+Tool.log(rawStr`this is string ${rawVar}`);

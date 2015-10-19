@@ -70,10 +70,7 @@ tag`this is string ${rawVar}`
 ```
 ```
 RESULT:
-strings:
 this is string 
-values:
-12
 ```
 
 
