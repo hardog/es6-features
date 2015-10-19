@@ -39,11 +39,9 @@ btA + btB is equal to 12 + 12 = 24;
 var tag = function(strings, ...values){
     console.log('RESULT:');
     console.log('strings is:');
-    console.log(strings.join('
-'));
+    console.log(strings.join('\n'));
     console.log('values is:');
-    console.log(values.join('
-'));
+    console.log(values.join('\n'));
 
     // just todo something
 
@@ -52,10 +50,13 @@ var tag = function(strings, ...values){
 var tagVarA = 12;
 ```
 RESULT:
+
 strings is:
+
 this is string 
 
 values is:
+
 12
 ```this is the tag result!```
 
