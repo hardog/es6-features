@@ -1,8 +1,7 @@
 // ============== define support =================
 var Tool = require('./tool');
 
-// define back-tick as bt
-var bt;
+// notes: define back-tick as bt prefix
 
 Tool.log('module', 'ES6 template literal string');
 // ============== back-triks =====================
@@ -62,3 +61,19 @@ Tool.log(tag`this is string ${tagVarA}`);
 
 // =================== raw string ====================
 Tool.log('unit', 'raw string');
+var rawStr = function(strings, ...values){
+    return '\nRESULT:\n' + strings.raw[0] + '\n'
+};
+var rawVar = 12;
+
+Tool.log(`
+CONTEXT:
+var rawStr = function(strings, ...values){
+    return '\\nRESULT:\\n' + strings.raw[0] + '\\n'
+};
+var rawVar = 12;
+
+USAGE:
+tag\`this is string \$\{rawVar\}\`
+`);
+Tool.log(tag`this is string ${rawVar}`);

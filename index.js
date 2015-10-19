@@ -7,8 +7,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var Tool = require('./tool');
 
-// define back-tick as bt
-var bt;
+// notes: define back-tick as bt prefix
 
 Tool.log('module', 'ES6 template literal string');
 // ============== back-triks =====================
@@ -45,3 +44,10 @@ Tool.log(tag(_templateObject, tagVarA));
 
 // =================== raw string ====================
 Tool.log('unit', 'raw string');
+var rawStr = function rawStr(strings) {
+    return '\nRESULT:\n' + strings.raw[0] + '\n';
+};
+var rawVar = 12;
+
+Tool.log('\nCONTEXT:\nvar rawStr = function(strings, ...values){\n    return \'\\nRESULT:\\n\' + strings.raw[0] + \'\\n\'\n};\nvar rawVar = 12;\n\nUSAGE:\ntag`this is string ${rawVar}`\n');
+Tool.log(tag(_templateObject, rawVar));

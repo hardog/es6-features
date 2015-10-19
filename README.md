@@ -58,5 +58,22 @@ values:
 12
 ```
 + raw string
+```
+CONTEXT:
+var rawStr = function(strings, ...values){
+    return '\nRESULT:\n' + strings.raw[0] + '\n'
+};
+var rawVar = 12;
+
+USAGE:
+tag`this is string ${rawVar}`
+```
+```
+RESULT:
+strings:
+this is string 
+values:
+12
+```
 
 
