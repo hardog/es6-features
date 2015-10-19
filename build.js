@@ -19,8 +19,8 @@ var output,
 _.each(fileList, function(v, k ){
     nodeCommand = 'node ' + buildPaths + v.replace(/\.js/, '') + '_build.js';
     output = execSync(nodeCommand).toString();
-    indexReadMeTpl.push('- [' + v + '](' + buildPaths + v + ')');
-    grunt.file.write(path.join(__dirname, compiledPaths + readmePath), output);
+    indexReadMeTpl.push('- [' + v + '](' + (compiledPaths + v.replace(/\.js/, '') + readmePath) + ')');
+    grunt.file.write(path.join(__dirname, compiledPaths + v.replace(/\.js/, '') + readmePath), output);
 });
 
 // readme write back
