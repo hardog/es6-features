@@ -1,5 +1,11 @@
 # ES6-feature
-experiment es6 feature
+Experiment ES6 features
+
+# Usage
+first, install npm & node, then type the following command:
+```
+$npm start
+```
 
 # Test Envioronment
 ```
@@ -11,8 +17,3 @@ npm : 2.11.3
 # Experiment List
 <%= result %>
 
-# usage
-first, install npm & node, then type the following command:
-```
-$npm start
-```
