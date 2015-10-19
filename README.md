@@ -43,7 +43,7 @@ var tag = function(strings, ...values){
 
     // just todo something
 
-    return '\nRESULT: strings:\n' + strings + ', values:\n' + values;
+    return '\nRESULT:\n strings:\n' + strings + '\nvalues:\n' + values + '\n';
 };
 var tagVarA = 12;
 
@@ -54,7 +54,9 @@ tag`this is string ${tagVarA}`
 RESULT:
  strings:
 this is string 
-, values:
-12```
+
+values:
+12
+```
 
 

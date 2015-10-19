@@ -36,9 +36,9 @@ var tag = function tag(strings) {
 
     // just todo something
 
-    return '\nRESULT:\n strings:\n' + strings + ', values:\n' + values;
+    return '\nRESULT:\n strings:\n' + strings + '\nvalues:\n' + values + '\n';
 };
 var tagVarA = 12;
 
-Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\\n\');\n    var values = values.join(\'\\n\');\n\n    // just todo something\n\n    return \'\\nRESULT: strings:\\n\' + strings + \', values:\\n\' + values;\n};\nvar tagVarA = 12;\n\nUSAGE:\ntag`this is string ${tagVarA}`\n');
+Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\\n\');\n    var values = values.join(\'\\n\');\n\n    // just todo something\n\n    return \'\\nRESULT:\\n strings:\\n\' + strings + \'\\nvalues:\\n\' + values + \'\\n\';\n};\nvar tagVarA = 12;\n\nUSAGE:\ntag`this is string ${tagVarA}`\n');
 Tool.log(tag(_templateObject, tagVarA));
