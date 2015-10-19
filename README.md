@@ -38,11 +38,18 @@ btA + btB is equal to 12 + 12 = 24;
 ```
 CONTEXT:
 var tag = function(strings, ...values){
-    Tool.log('RESULT:');
-    Tool.log('strings is:');
-    Tool.log(strings.join('\n'));
-    Tool.log('values is:');
-    Tool.log(values.join('\n'));
+    var strings = strings.join('
+');
+    var values = values.join('
+');
+
+    Tool.log(`
+        RESULT:
+        strings is:
+        ${strings}
+        values is:
+        ${values}
+    `);
 
     // just todo something
 
@@ -50,15 +57,14 @@ var tag = function(strings, ...values){
 };
 var tagVarA = 12;
 ```
-```RESULT:
 ```
-```strings is:
-```
-```this is string 
-```
-```values is:
-```
-```12```
+        RESULT:
+        strings is:
+        this is string 
+
+        values is:
+        12
+    ```
 ```this is the tag result!```
 
 
