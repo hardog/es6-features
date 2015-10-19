@@ -15,5 +15,5 @@ npm : 2.11.3
 ```
 
 # Experiment List
-- [./features/template_str.js](./features/template_str.js)
+- [template_str.js](./build/template_str.js)
 

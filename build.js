@@ -19,7 +19,7 @@ var output,
 _.each(fileList, function(v, k ){
     nodeCommand = 'node ' + buildPaths + v.replace(/\.js/, '') + '_build.js';
     output = execSync(nodeCommand).toString();
-    indexReadMeTpl.push('- [' + featuresPaths + v + '](' + featuresPaths + v + ')');
+    indexReadMeTpl.push('- [' + v + '](' + buildPaths + v + ')');
     grunt.file.write(path.join(__dirname, compiledPaths + readmePath), output);
 });
 
