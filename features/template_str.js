@@ -39,7 +39,7 @@ var tag = function(strings, ...values){
 
     // just todo something
 
-    return 'strings:[' + strings + '], values:[' + values + ']';
+    return 'RESULT:\n strings:[' + strings + '], values:[' + values + ']';
 };
 var tagVarA = 12;
 
@@ -54,5 +54,7 @@ var tag = function(strings, ...values){
     return 'strings:' + strings + ', values:' + values;
 };
 var tagVarA = 12;
+USAGE:
+tag\`this is string \$\{tagVarA\}\`
 `);
 Tool.log(tag`this is string ${tagVarA}`);
