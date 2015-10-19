@@ -43,14 +43,18 @@ var tag = function(strings, ...values){
 
     // just todo something
 
-    return 'strings:' + strings + ', values:' + values;
+    return '\nRESULT: strings:\n' + strings + ', values:\n' + values;
 };
 var tagVarA = 12;
+
 USAGE:
 tag`this is string ${tagVarA}`
 ```
-```RESULT:
- strings:[this is string 
-], values:[12]```
+```
+RESULT:
+ strings:
+this is string 
+, values:
+12```
 
 
