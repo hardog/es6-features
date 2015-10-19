@@ -1,5 +1,11 @@
 # ES6-feature
-experiment es6 feature
+Experiment ES6 features
+
+# Usage
+first, install npm & node, then type the following command:
+```
+$npm start
+```
 
 # Test Envioronment
 ```
@@ -29,10 +35,28 @@ RESULT:
 btA + btB is equal to 12 + 12 = 24;
 ```
 - Tagged string
+```
+var tag = function(strings, ...values){
+    console.log('RESULT:');
+    console.log('strings is:');
+    console.log(strings.join('
+'));
+    console.log('values is:');
+    console.log(values.join('
+'));
+
+    // just todo something
+
+    return 'this is the tag result!';
+};
+var tagVarA = 12;
+```
+RESULT:
+strings is:
+this is string 
+
+values is:
+12
+```this is the tag result!```
 
 
-# usage
-first, install npm & node, then type the following command:
-```
-$npm start
-```
