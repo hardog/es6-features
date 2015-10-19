@@ -27,16 +27,16 @@ Tool.log('\nCONTEXT:\nvar btA = 12, btB = 12;\nbtA + btB is equal to ${btA} + ${
 // ============== tagged string ===================
 Tool.log('unit', 'Tagged string');
 var tag = function tag(strings) {
-    console.log('RESULT:\n');
-    console.log('strings is:\n');
-    console.log(strings.join('\n'));
-    console.log('values is:\n');
+    Tool.log('RESULT:\n');
+    Tool.log('strings is:\n');
+    Tool.log(strings.join('\n'));
+    Tool.log('values is:\n');
 
     for (var _len = arguments.length, values = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
         values[_key - 1] = arguments[_key];
     }
 
-    console.log(values.join('\n'));
+    Tool.log(values.join('\n'));
 
     // just todo something
 
@@ -44,5 +44,5 @@ var tag = function tag(strings) {
 };
 var tagVarA = 12;
 
-Tool.log('\nvar tag = function(strings, ...values){\n    console.log(\'RESULT:\');\n    console.log(\'strings is:\');\n    console.log(strings.join(\'\\n\'));\n    console.log(\'values is:\');\n    console.log(values.join(\'\\n\'));\n\n    // just todo something\n\n    return \'this is the tag result!\';\n};\nvar tagVarA = 12;\n');
+Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    Tool.log(\'RESULT:\');\n    Tool.log(\'strings is:\');\n    Tool.log(strings.join(\'\\n\'));\n    Tool.log(\'values is:\');\n    Tool.log(values.join(\'\\n\'));\n\n    // just todo something\n\n    return \'this is the tag result!\';\n};\nvar tagVarA = 12;\n');
 Tool.log(tag(_templateObject, tagVarA));

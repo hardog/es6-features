@@ -34,11 +34,11 @@ btA + btB is equal to ${btA} + ${btB} = ${btA + btB};
 // ============== tagged string ===================
 Tool.log('unit', 'Tagged string');
 var tag = function(strings, ...values){
-    console.log('RESULT:\n');
-    console.log('strings is:\n');
-    console.log(strings.join('\n'));
-    console.log('values is:\n');
-    console.log(values.join('\n'));
+    Tool.log('RESULT:\n');
+    Tool.log('strings is:\n');
+    Tool.log(strings.join('\n'));
+    Tool.log('values is:\n');
+    Tool.log(values.join('\n'));
 
     // just todo something
 
@@ -47,12 +47,13 @@ var tag = function(strings, ...values){
 var tagVarA = 12;
 
 Tool.log(`
+CONTEXT:
 var tag = function(strings, ...values){
-    console.log('RESULT:');
-    console.log('strings is:');
-    console.log(strings.join('\\n'));
-    console.log('values is:');
-    console.log(values.join('\\n'));
+    Tool.log('RESULT:');
+    Tool.log('strings is:');
+    Tool.log(strings.join('\\n'));
+    Tool.log('values is:');
+    Tool.log(values.join('\\n'));
 
     // just todo something
 
