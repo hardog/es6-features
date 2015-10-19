@@ -57,7 +57,7 @@ this is string
 values:
 12
 ```
-+ raw string
++ raw string => strings.raw[0]
 ```
 CONTEXT:
 var rawStr = function(strings, ...values){
@@ -67,10 +67,25 @@ var rawVar = 12;
 
 USAGE:
 rawStr`this is string ${rawVar}`
+
+NOTES:
+the rawVar variable is not show!
 ```
 ```
 RESULT:
 this is string 
+```
++ raw string => String.raw
+```
+CONTEXT:
+var rawVar2 = 12;
+
+USAGE:
+String.raw`this is string ${rawVar2}`
+
+NOTES:
+Not supported by node 0.12.7, String has not the raw method
+Tested it in chrome45 is ok!
 ```
 
 

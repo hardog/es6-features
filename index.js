@@ -42,12 +42,18 @@ var tagVarA = 12;
 Tool.log('\nCONTEXT:\nvar tag = function(strings, ...values){\n    var strings = strings.join(\'\\n\');\n    var values = values.join(\'\\n\');\n\n    // just todo something\n\n    return \'\\nRESULT:\\nstrings:\\n\' + strings + \'values:\\n\' + values + \'\\n\';\n};\nvar tagVarA = 12;\n\nUSAGE:\ntag`this is string ${tagVarA}`\n');
 Tool.log(tag(_templateObject, tagVarA));
 
-// =================== raw string ====================
-Tool.log('unit', 'raw string');
+// =================== raw string => strings.raw[0] ====================
+Tool.log('unit', 'raw string => strings.raw[0]');
 var rawStr = function rawStr(strings) {
     return '\nRESULT:\n' + strings.raw[0] + '\n';
 };
 var rawVar = 12;
 
-Tool.log('\nCONTEXT:\nvar rawStr = function(strings, ...values){\n    return \'\\nRESULT:\\n\' + strings.raw[0] + \'\\n\'\n};\nvar rawVar = 12;\n\nUSAGE:\nrawStr`this is string ${rawVar}`\n');
+Tool.log('\nCONTEXT:\nvar rawStr = function(strings, ...values){\n    return \'\\nRESULT:\\n\' + strings.raw[0] + \'\\n\'\n};\nvar rawVar = 12;\n\nUSAGE:\nrawStr`this is string ${rawVar}`\n\nNOTES:\nthe rawVar variable is not show!\n');
 Tool.log(rawStr(_templateObject, rawVar));
+
+// =================== raw string => Strings.raw`string` ====================
+Tool.log('unit', 'raw string => String.raw');
+var rawVar2 = 12;
+Tool.log('\nCONTEXT:\nvar rawVar2 = 12;\n\nUSAGE:\nString.raw`this is string ${rawVar2}`\n\nNOTES:\nNot supported by node 0.12.7, String has not the raw method\nTested it in chrome45 is ok!\n');
+// Tool.log(String.raw`this is string ${rawVar2}`);

@@ -59,8 +59,8 @@ tag\`this is string \$\{tagVarA\}\`
 `);
 Tool.log(tag`this is string ${tagVarA}`);
 
-// =================== raw string ====================
-Tool.log('unit', 'raw string');
+// =================== raw string => strings.raw[0] ====================
+Tool.log('unit', 'raw string => strings.raw[0]');
 var rawStr = function(strings, ...values){
     return '\nRESULT:\n' + strings.raw[0] + '\n'
 };
@@ -75,5 +75,24 @@ var rawVar = 12;
 
 USAGE:
 rawStr\`this is string \$\{rawVar\}\`
+
+NOTES:
+the rawVar variable is not show!
 `);
 Tool.log(rawStr`this is string ${rawVar}`);
+
+// =================== raw string => Strings.raw`string` ====================
+Tool.log('unit', 'raw string => String.raw');
+var rawVar2 = 12;
+Tool.log(`
+CONTEXT:
+var rawVar2 = 12;
+
+USAGE:
+String.raw\`this is string \$\{rawVar2\}\`
+
+NOTES:
+Not supported by node 0.12.7, String has not the raw method
+Tested it in chrome45 is ok!
+`);
+// Tool.log(String.raw`this is string ${rawVar2}`);
