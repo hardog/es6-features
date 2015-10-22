@@ -1,4 +1,4 @@
-# let and const
+## let and const
 + let command
  - `let 只在所声明的代码块内有效`
  - `不像var那样存在变量声明提升问题`
