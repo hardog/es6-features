@@ -20,8 +20,10 @@ Tool.log = function(type, msg){
         case 'err':
             msg = '\`' + chalk.red(msg) + '\`';
             break;
+        case 'single':
+            msg = '\n' + msg;
+            break;
         default:
-            if(!/\n/.test(msg)){ msg = '\n' + msg; }
             msg = '\`\`\`' + chalk.white(msg) + '\`\`\`';
             break;
     }

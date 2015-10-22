@@ -3,7 +3,7 @@ var Tool = require('../tool');
 Tool.log('module', 'let and const');
 // let command some tips
 Tool.log('unit', 'let command');
-Tool.log('\nlet 只在所声明的代码块内有效');
+Tool.log('single', 'let 只在所声明的代码块内有效');
 
 // block scope some tips
 Tool.log('unit', 'block scope');
