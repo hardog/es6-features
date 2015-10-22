@@ -1,4 +1,3 @@
-// ============== define support =================
 var Tool = require('../tool');
 
 // notes: define back-tick as bt prefix
