@@ -17,5 +17,6 @@ npm : 2.11.3
 ```
 
 # Experiment List
+- [let_const](./compiled/let_const.md)
 - [template_str](./compiled/template_str.md)
 

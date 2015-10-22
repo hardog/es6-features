@@ -1,4 +1,3 @@
-// ============== define support =================
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['this is string ', ''], ['this is string ', '']);
