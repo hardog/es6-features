@@ -12,7 +12,7 @@ Tool.log = function(type, msg){
 
     switch(type){
         case 'module':
-            msg = '## ' + chalk.cyan(msg);
+            msg = '# ' + chalk.cyan(msg);
             break;
         case 'unit':
             msg = '+ ' + chalk.magenta(msg);

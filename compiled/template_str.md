@@ -1,4 +1,4 @@
-## ES6 template literal string
+# ES6 template literal string
 + Back-tick Basic
 ```
 CONTEXT: 
