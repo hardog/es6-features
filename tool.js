@@ -21,6 +21,7 @@ Tool.log = function(type, msg){
             msg = '\`' + chalk.red(msg) + '\`';
             break;
         default:
+            if(!/\n/.test(msg)){ msg = '\n' + msg; }
             msg = '\`\`\`' + chalk.white(msg) + '\`\`\`';
             break;
     }
